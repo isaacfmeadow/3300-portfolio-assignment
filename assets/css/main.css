@@ -2608,4 +2608,28 @@ body, input, textarea, select {
 	background-color: var(--navy);
 	color: var(--cream) !important;
   }
+/* Uniform, non-cropped images in portfolio */
+.image.featured {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f4f4f4; /* optional: makes uneven image ratios look cleaner */
+	padding: 10px;
+	border-radius: 6px;
+  }
   
+  .image.featured img {
+	width: auto;
+	height: 150px;   /* adjust this number for bigger/smaller images */
+	object-fit: contain; /* preserves the whole image */
+  }
+  
+  .box.style2 h3 {
+	font-size: 1.25rem;
+	margin-top: 0.75rem;
+  }
+  
+  .box.style2 p {
+	font-size: 0.95rem;
+  }
+   
