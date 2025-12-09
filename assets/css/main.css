@@ -2457,7 +2457,7 @@ input, select, textarea {
 	height: 100%;
 	object-fit: cover;
 	display: block;
-  }ay: block;
+  }
   @media (max-width: 768px) {
 	#top .row {
 	  display: flex;
@@ -2470,4 +2470,14 @@ input, select, textarea {
 	  margin-top: 0;
 	}
   }
-	
+/* Brand colors for social icons */
+ul.social li a.fa-linkedin-in:before {
+    background-color: #0A66C2;   /* LinkedIn blue */
+    color: #ffffff;              /* icon color */
+}
+
+ul.social li a.fa-github:before {
+    background-color: #181717;   /* GitHub black */
+    color: #ffffff;
+}
+
