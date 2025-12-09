@@ -2480,4 +2480,27 @@ ul.social li a.fa-github:before {
     background-color: #181717;   /* GitHub black */
     color: #ffffff;
 }
-
+#cookie-popup {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 1.5rem;
+	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+	font-size: 0.9rem;
+	z-index: 9999;
+  }
+  
+  #cookie-popup p {
+	margin: 0 0 0.5rem;
+  }
+  
+  #cookie-popup button {
+	cursor: pointer;
+  }
+  
+  #cookie-popup.hidden {
+	display: none;
+  }
+  

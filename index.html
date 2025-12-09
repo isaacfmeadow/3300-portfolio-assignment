@@ -226,18 +226,42 @@
       </footer>
     </article>
     
-    <div id="cookie-popup">
-      <p>
-        By using this site you agree to the storing of cookies on your device to
-        enhance site navigation and to analyze site usage. Learn more about our
-        <a href="/cookie-policy.html">cookie policy</a>.
-      </p>
-      <p>
-        <button id="accept-cookies">Accept</button>
-      </p>
-    </div>
-
-    <script scr="cookie-popup.js"><</script>
+    <div id="cookie-popup" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    z-index: 9999;
+  ">
+    <p>
+      By using this site you agree to the storing of cookies on your device to
+      enhance site navigation and to analyze site usage.
+      Learn more in our <a href="/cookie-policy.html" style="color:#fff; text-decoration:underline;">cookie policy</a>.
+    </p>
+    <p>
+      <button id="accept-cookies" style="padding: 0.4rem 1rem; cursor: pointer;">
+        Accept
+      </button>
+    </p>
+  </div>
+  
+  <script>
+    // Hide immediately if user already accepted
+    if (localStorage.getItem("cookieConsentAccepted") === "true") {
+      document.getElementById("cookie-popup").style.display = "none";
+    }
+  
+    // Accept button logic
+    document.getElementById("accept-cookies").addEventListener("click", function() {
+      localStorage.setItem("cookieConsentAccepted", "true");
+      document.getElementById("cookie-popup").style.display = "none";
+    });
+  </script>
+  
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NL2PC5NGL1"></script>
