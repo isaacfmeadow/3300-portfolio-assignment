@@ -2511,12 +2511,13 @@ ul.social li a.fa-github:before {
 }
   
 #cookie-popup button {
+	all: unset;
 	cursor: pointer;
 	background: var(--cream);
 	color: var(--navy);
-	border-radius: 4px;
-	border: none;
 	padding: 0.4rem 0.9rem;
+	border-radius: 4px;
+	font-weight: 600;
 }
   
 #cookie-popup.hidden {
