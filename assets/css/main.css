@@ -2609,3 +2609,10 @@ body, input, textarea, select {
 	background-color: var(--navy);
 	color: var(--cream) !important;
   }
+/* Force cookie accept button colors */
+#cookie-popup #accept-cookies {
+	background-color: var(--cream) !important;
+	color: var(--navy) !important;
+	background-image: none !important;
+  }
+  
